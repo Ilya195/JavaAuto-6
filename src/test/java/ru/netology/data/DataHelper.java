@@ -25,7 +25,7 @@ public class DataHelper {
         private String testId;
 
     }
-    public static AuthInfo getAuthInfo(){return new AuthInfo("vasya", "qwerty123");}
+    public static AuthInfo getAuthInfo(){return new AuthInfo("asya", "qwerty123");}
 
     public static VerificationCode getVerificationCode(){return new VerificationCode("12345");}
 
