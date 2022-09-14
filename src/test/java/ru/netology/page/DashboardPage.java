@@ -21,7 +21,7 @@ public class DashboardPage {
     }
 
     public int getCardBalance(DataHelper.CardInfo cardInfo) {
-        var text = cards.findBy(Condition.text(cardInfo.getCardNumber().substring(12,16))).getText();
+        var text = cards.findBy(Condition.text(cardInfo.getCardNumber().substring(12, 16))).getText();
         return extractBalance(text);
     }
 
@@ -30,12 +30,10 @@ public class DashboardPage {
         return new TransferPage();
     }
 
-
     private int extractBalance(String text) {
         var start = text.indexOf(balanceStart);
         var finish = text.indexOf(balanceFinish);
         var value = text.substring(start + balanceStart.length(), finish);
         return Integer.parseInt(value);
     }
-
 }
